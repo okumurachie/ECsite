@@ -22,6 +22,7 @@ use App\Http\Controllers\ItemController;
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+
 Route::get('/', [UserController::class, 'index']);
 
 Route::middleware('auth')->group(function () {

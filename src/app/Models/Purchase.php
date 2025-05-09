@@ -14,6 +14,7 @@ class Purchase extends Model
         'quantity',
         'price',
         'payment_method',
+        'post_code',
         'recipient',
     ];
     public function user()

@@ -21,6 +21,7 @@ class CreateItemsTable extends Migration
             $table->unsignedInteger('stock')->default(0);
             $table->text('image')->nullable();
             $table->text('description')->nullable();
+            $table->softDeletes()->nullable();
             $table->timestamps();
         });
     }

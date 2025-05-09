@@ -17,9 +17,12 @@ class CreatePurchasesTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->cascadeOnDelete();
             $table->foreignId('item_id')->constrained()->cascadeOnDelete();
+            $table->integer('price');
             $table->integer('quantity');
             $table->string('payment_method');
+            $table->string('post_code');
             $table->text('recipient');
+            $table->tinyInteger('shipping_status')->default(0);
             $table->timestamps();
         });
     }
