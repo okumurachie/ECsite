@@ -54,8 +54,8 @@ class User extends Authenticatable implements MustVerifyEmail
         return $this->is_admin;
     }
 
-    public function product()
+    public function item()
     {
-        return $this->hasMany(Product::class);
+        return $this->hasMany(Item::class);
     }
 }
